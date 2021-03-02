@@ -8,9 +8,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>e-commerce</title>
 </head>
 <body>
+    <!-- Navbar main -->
     <section>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand ml-5" href="#">E-Commerce</a>
@@ -35,19 +37,23 @@
         </nav>
     </section>
     
-    
+    <!-- body -->
     <section>
         <div class="container">
             <div class="row align-items-start justify-content-center mt-5">
+
+                <!-- search -->
                 <div class="col-lg-3 mb-5">
                     <div class="input-group">                        
                         <input type="text" class="form-control" placeholder="Buscar camisetas" aria-label="Buscar camisetas" aria-describedby="basic-addon1">
                         <span class="input-group-text" id="basic-addon1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-            </svg>
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                </svg>
                         </span>
                     </div>
+
+                    <!-- Catgories -->
                     <div class="mt-5 d-none d-lg-block d-xl-block">
                         <h4>Categorías</h4>
                     </div>
@@ -92,8 +98,15 @@
                         </ul>
                     </div>
                 </div>
+                
+                <!-- Carousel -->
                 <div class="col-lg-9">
                     <div id="carousel-challenge" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-challenge" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-challenge" data-slide-to="1"></li>
+                            <li data-target="#carousel-challenge" data-slide-to="2"></li>
+                          </ol>
                         <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="/assets/img/Carousel-1.jpg" alt="carousel 1">
@@ -114,8 +127,10 @@
                         <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    <div class="container mt-5">
-                        <div class="row justify-content-start">
+
+                    <!-- Articles -->
+                    <div class="container mt-4">
+                        <div class="row justify-content-center>
                             <div class="card-group">
                                 <div class="col-sm-6 col-md-4 mb-3">
                                     <div class="card">
@@ -173,7 +188,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6 col-md-4">
+                                <div class="col-sm-6 col-md-4 mb3">
                                     <div class="card mb-3">
                                         <img class="card-img-top" src="/assets/img/camiseta-5.jpg" alt="camiseta 1">
                                         <div class="card-body">
@@ -198,7 +213,7 @@
                             <div class="modal-header">
                                 <h5 class="modal-title" id="details-modal-title">Hisper Ultimate</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
@@ -208,9 +223,42 @@
                                     </svg> Este producto está agotado
                                 </div>
 
+                                
                                 <div class="container">
                                     <div class="row justify-content-start">
-                                        <div class="col-12">
+                                        <!-- Details -->
+                                        <div class="card">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <img src="/assets/img/camiseta-1.jpg" class="img-fluid" alt="camiseta-1">
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card-block px-2">
+                                                        <p class="card-text">Precio: <strong>299</strong></p>
+                                                        <p class="card-text">Calificación: 
+                                                            <span class="fa fa-star" data-rating="1"></span>
+                                                            <span class="fa fa-star" data-rating="2"></span>
+                                                            <span class="fa fa-star" data-rating="3"></span>
+                                                            <span class="fa fa-star" data-rating="4"></span>
+                                                            <span class="fa fa-star-o" data-rating="5"></span>
+                                                        </p>
+                                                        <p class="card-text">
+                                                            <span class="badge badge-warning">Hisper</span>
+                                                            <span class="badge badge-secondary">Deportiva</span>
+                                                        </p>
+                                                        <a class="card-text" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                                            </svg>
+                                                            Agregar a los deseos
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+
+                                        <!-- Comments -->
+                                        <div class="col-12 mt-3">
                                             <nav>
                                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                                     <a class="nav-item nav-link active" id="nav-challenges-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-challenges" aria-selected="true">Descripción</a>
@@ -224,7 +272,7 @@
                                                 <div class="tab-pane fade p-3" id="nav-comments" role="tabpanel" aria-labelledby="nav-comments-tab">
                                                     <ul class="list-group">
                                                         <li class="list-group-item">
-                                                            Germán Escobar comentó hace dos días
+                                                            <strong>Germán Escobar comentó hace dos días</strong>
                                                         </li>
                                                         <li class="list-group-item">
                                                             Esta camiseta está increíble, la quiero!
@@ -232,7 +280,7 @@
                                                     </ul>
                                                     <form class="mt-3">
                                                         <div class="form-group">
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ingresa tu comentario"></textarea>
                                                           </div>
                                                     </form>
                                                 </div>
@@ -253,4 +301,6 @@
     </section>
     
 </body>
+<!-- rating.js file -->
+<script src="/assets/js/app.js"></script>
 </html>
